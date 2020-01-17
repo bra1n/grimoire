@@ -4,7 +4,7 @@
   "description": "discord bot for Blood on the Clocktower",
   "main": "server.js",
   "engines": {
-    "node": "8.4.0"
+    "node": "12.14.1"
   },
   "scripts": {
     "start": "node server.js"
