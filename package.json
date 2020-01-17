@@ -1,7 +1,7 @@
 {
-  "name": "storyteller",
+  "name": "grimoire",
   "version": "1.0.0",
-  "description": "discord bot for Blood on the Clocktower",
+  "description": "Discord bot for Blood on the Clocktower",
   "main": "server.js",
   "engines": {
     "node": "12.14.1"
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bra1n/storyteller"
+    "url": "git://github.com/bra1n/grimoire"
   },
   "author": "Steffen Baumgart <steffen@baumgart.biz>",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/bra1n/storyteller/issues"
+    "url": "https://github.com/bra1n/grimoire/issues"
   },
   "dependencies": {
     "@discordjs/collection": "^0.1.3",

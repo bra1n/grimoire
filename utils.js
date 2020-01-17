@@ -33,7 +33,7 @@ const updateServerCount = (bot) => {
         activity: {
             name: 'BOTC on '+ bot.guilds.size +' servers (' + bot.ws.shards.size + ' shards)',
             type: 'PLAYING',
-            url: 'https://github.com/bra1n/storyteller'
+            url: 'https://github.com/bra1n/grimoire'
         }
     });
 };

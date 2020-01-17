@@ -10,12 +10,12 @@ class Help {
                 inline: false,
                 description: "Show this help text",
                 help: 'This command allows you to explore the different functions and ' +
-                    'features of your beloved Storyteller. You can look up detailed descriptions ' +
+                    'features of your beloved Grimoire bot. You can look up detailed descriptions ' +
                     'for a command by using `'+this.cc+'help <command>`, like `!help card`.',
                 examples: ["help", "help card"]
             }
         };
-        this.location = 'https://github.com/bra1n/storyteller';
+        this.location = 'https://github.com/bra1n/grimoire';
         this.modules = modules;
     }
 
@@ -57,10 +57,10 @@ class Help {
                 description += ':small_blue_diamond: **'+this.cc+command+'**  '+commandObj.description+'\n';
             });
             embed.setDescription(description+'\n To learn more about a command, use `'+this.cc+'help <command>`');
-            embed.addField('Add Storyteller to your Discord', 'This bot is provided free of charge ' +
+            embed.addField('Add The Grimoire to your Discord', 'This bot is provided free of charge ' +
                 'and can be added to your server, too!\n :link: ' +
                 'https://discordapp.com/api/oauth2/authorize?client_id=667841700932091935&scope=bot&permissions=387136\n');
-            embed.addField('Storyteller Source Code', ':link: https://github.com/bra1n/storyteller');
+            embed.addField('Grimoire Source Code', ':link: https://github.com/bra1n/grimoire');
         }
 
         return msg.author.send('', {embed});
