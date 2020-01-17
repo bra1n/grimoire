@@ -4,7 +4,7 @@ Chatbot to help with getting [Blood on the Clocktower](https://bloodontheclockto
 
 ![Example](https://i.imgur.com/HhEkvvo.png)
 
-[Add the bot to your server](https://discordapp.com/api/oauth2/authorize?client_id=667841700932091935&scope=bot&permissions=387136)
+[Add the bot to your server](https://discordapp.com/api/oauth2/authorize?client_id=667841700932091935&scope=bot&permissions=313408)
 
 ## Supported commands:
 

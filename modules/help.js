@@ -59,7 +59,7 @@ class Help {
             embed.setDescription(description+'\n To learn more about a command, use `'+this.cc+'help <command>`');
             embed.addField('Add The Grimoire to your Discord', 'This bot is provided free of charge ' +
                 'and can be added to your server, too!\n :link: ' +
-                'https://discordapp.com/api/oauth2/authorize?client_id=667841700932091935&scope=bot&permissions=387136\n');
+                'https://discordapp.com/api/oauth2/authorize?client_id=667841700932091935&scope=bot&permissions=313408\n');
             embed.addField('Grimoire Source Code', ':link: https://github.com/bra1n/grimoire');
         }
 
