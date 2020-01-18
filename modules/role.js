@@ -40,19 +40,21 @@ class BotcRoleLoader {
     generateEmbed(page, command) {
         // generate embed title and description text
         const title = page.title;
-        let team;
-        let scenario;
+        let team = 'No team';
+        let edition = 'No edition'
         let color;
         page.categories.forEach(({title}) => {
            if(!!this.colors[title]) {
                team = title.replace(/Category:/,'');
                color = this.colors[title];
-           } else scenario = title.replace(/Category:/,'');
+           } else {
+               edition = title.replace(/Category:/,'');
+           }
         });
 
         const $ = cheerio.load(page.revisions[0]['*']);
         const content = $('.columns').text().replace(/==.*?==/ig,'###').replace(/[\n\t]/g,'').split('###')
-        let description = '**' + scenario + ' / ' + team + '**\n';
+        let description = '**' + edition + ' / ' + team + '**\n';
         description += content[0];
         description += '```' + content[1].substr(1,content[1].length - 2) + '```';
 
