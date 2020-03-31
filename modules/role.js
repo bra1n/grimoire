@@ -82,6 +82,7 @@ class BotcRoleLoader {
     async getRole(role) {
         const search = await rp({url: this.wikiSearch + encodeURIComponent('*'+role+'*'), json: true});
         if (search.query && search.query.search.length) {
+            search.query.search.sort((a, b) => b.wordcount - a.wordcount);
             const title = search.query.search[0].title;
             const body = await rp({url: this.wikiApi + encodeURIComponent(title), json: true});
             if(body.query && !body.query.pages['-1']) {
