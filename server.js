@@ -16,11 +16,19 @@ const modules = [
 
 // initialize the bot and all modules
 const bot = new Discord.Client({
-  shardList: 'auto',
   shards: 'auto',
   messageCacheMaxSize: 100,
   messageCacheLifetime: 60 * 10,
   messageSweepInterval: 90,
+  ws: {
+    intents: [
+      'GUILDS',
+      'GUILD_MESSAGES',
+      'GUILD_MESSAGE_REACTIONS',
+      'DIRECT_MESSAGES',
+      'DIRECT_MESSAGE_REACTIONS'
+    ]
+  },
   disabledEvents: [
     'GUILD_UPDATE',
     'GUILD_MEMBER_ADD',
