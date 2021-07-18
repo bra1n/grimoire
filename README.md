@@ -16,4 +16,5 @@ Chatbot to help with getting [Blood on the Clocktower](https://bloodontheclockto
 
 The bot needs permissions to listen to, send and edit its own messages as well as add embeds, images, files and emojis. 
 Feel free to disable any rights you don't wont it to have, but this may limit (future) functionality.
+
 ![Permissions](https://i.imgur.com/BHqKg8T.png)
