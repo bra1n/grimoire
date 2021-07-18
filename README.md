@@ -8,7 +8,8 @@ Chatbot to help with getting [Blood on the Clocktower](https://bloodontheclockto
 
 ## Supported commands:
 
-* **!role**: Show the role information from the official wiki, example: `!role washerwoman`
+* **!role**: Show the role information from the official wiki, example: `!role washerwoman` (alias: `!char`)
+* **!glossary**: Show a definition from the Glossary, example: `!glossary player` (alias: `!define`)
 * **!help**: Show the command help, example: `!help`
 
 ## Required permissions:
