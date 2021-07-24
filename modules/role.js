@@ -70,7 +70,7 @@ class BotcRoleLoader {
       footer: {text: footer},
       url: this.wikiUrl + encodeURIComponent(title),
       color,
-      thumbnail: image ? {url: this.wikiImage + image} : null
+      thumbnail: image ? {url: this.wikiImage + encodeURIComponent(image)} : null
     });
   }
 
