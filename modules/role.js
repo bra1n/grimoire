@@ -17,7 +17,7 @@ class BotcRoleLoader {
         examples: ["role washerwoman", "char spy"]
       },
     };
-    this.wikiUrl = "http://bloodontheclocktower.com/wiki/";
+    this.wikiUrl = "http://wiki.bloodontheclocktower.com/";
     this.wikiApi = this.wikiUrl + "api.php?action=query&prop=categories|revisions&rvprop=content&format=json&rvslots=*&titles=";
     this.wikiImage = this.wikiUrl + 'Special:FilePath/';
     this.wikiSearch = this.wikiUrl + 'api.php?action=query&list=search&srwhat=title&format=json&srsearch=';

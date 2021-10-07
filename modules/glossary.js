@@ -15,8 +15,8 @@ class BotcGlossaryLoader {
         examples: ["glossary drunk", "define dead"]
       },
     };
-    this.wikiPage = "https://bloodontheclocktower.com/wiki/Glossary";
-    this.wikiApi = "https://bloodontheclocktower.com/wiki/api.php?action=query&prop=categories|revisions&rvprop=content&format=json&rvslots=*&titles=Glossary";
+    this.wikiPage = "https://wiki.bloodontheclocktower.com/Glossary";
+    this.wikiApi = "https://wiki.bloodontheclocktower.com/api.php?action=query&prop=categories|revisions&rvprop=content&format=json&rvslots=*&titles=Glossary";
     this.definitions = new Map();
     this.fetchDefinitions();
   }
