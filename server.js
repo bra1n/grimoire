@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const _ = require("lodash");
 const utils = require("./utils");
+require('dotenv').config()
 
 const log = utils.getLogger('bot');
 log.info(`booting up...`);

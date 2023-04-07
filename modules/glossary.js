@@ -31,8 +31,8 @@ class BotcGlossaryLoader {
    */
   async fetchDefinitions() {
     const body = await rp({url: this.wikiApi, json: true});
-    if (body.query && body.query.pages["366"]) {
-      const page = body.query.pages["366"];
+    if (body.query && body.query.pages["192"]) {
+      const page = body.query.pages["192"];
       const glossary = page.revisions[0].slots.main['*'].replace(/\n +\n/,"\n\n").split("\n\n").map(e =>
         (e.match(/^'''(.*?):?''':? (.*)$/) || []).splice(1,2));
       log.info("loaded " + glossary.length + " definitions");
@@ -46,7 +46,8 @@ class BotcGlossaryLoader {
   // generate the embed
   generateEmbed({ title, definition }) {
     // footer
-    let footer = this.wikiPage;
+    let footer = "Use " + this.cc + "help to get a list of available commands.";
+    // let footer = this.wikiPage;
 
     // instantiate embed object
     return new Discord.MessageEmbed({
