@@ -54,8 +54,8 @@ class BotcRoleLoader {
 
     const $ = cheerio.load(page.revisions[0].slots.main['*']);
     const content = $('.columns').text().replace(/==.*?==/ig, '###').replace(/[\n\t]/g, '').split('###')
-    
-    
+
+
     let description = '**' + edition + ' / ' + team + '**\n';
     // description += '"' + content[1].substr(1, content[1].length - 2).split('"')[1] + '"';
     description += '```' + content[1].substr(1, content[1].length - 2).split('"')[0] + '```';
@@ -83,7 +83,7 @@ class BotcRoleLoader {
    */
   async getRole(role) {
     const search = await rp({url: this.wikiSearch + encodeURIComponent('*' + role + '*'), json: true});
-    
+
 
     // debugging
     // log.info(this.wikiSearch + encodeURIComponent('*' + role + '*'));
@@ -99,7 +99,6 @@ class BotcRoleLoader {
       if (body.query && body.query.pages[pageid]) {
         const page = body.query.pages[pageid];
         if (page.categories && page.categories.some(({title}) => !!this.colors[title])) {
-          log.info(page);
           return page;
         }
       }
