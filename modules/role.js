@@ -54,9 +54,11 @@ class BotcRoleLoader {
 
     const $ = cheerio.load(page.revisions[0].slots.main['*']);
     const content = $('.columns').text().replace(/==.*?==/ig, '###').replace(/[\n\t]/g, '').split('###')
+    
+    
     let description = '**' + edition + ' / ' + team + '**\n';
-    description += content[0];
-    description += '```' + content[1].substr(1, content[1].length - 2) + '```';
+    // description += '"' + content[1].substr(1, content[1].length - 2).split('"')[1] + '"';
+    description += '```' + content[1].substr(1, content[1].length - 2).split('"')[0] + '```';
 
     const image = $('.columns').text().match(/\[\[File:(.*?)\|/)[1];
 
@@ -81,13 +83,23 @@ class BotcRoleLoader {
    */
   async getRole(role) {
     const search = await rp({url: this.wikiSearch + encodeURIComponent('*' + role + '*'), json: true});
+    
+
+    // debugging
+    // log.info(this.wikiSearch + encodeURIComponent('*' + role + '*'));
+
     if (search.query && search.query.search.length) {
       const {title, pageid} = search.query.search.filter(({snippet, wordcount}) =>
         !snippet.match(/#redirect/i) && wordcount > 100).shift();
       const body = await rp({url: this.wikiApi + encodeURIComponent(title), json: true});
+
+    // debugging
+    // log.info(this.wikiApi + encodeURIComponent(title));
+
       if (body.query && body.query.pages[pageid]) {
         const page = body.query.pages[pageid];
         if (page.categories && page.categories.some(({title}) => !!this.colors[title])) {
+          log.info(page);
           return page;
         }
       }
